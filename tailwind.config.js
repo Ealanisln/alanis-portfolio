@@ -5,6 +5,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
   ],
+    daisyui: {
+      themes: [
+        "light",
+        "dark"
+      ],
+    },
   theme: {
     extend: {
       backgroundImage: {
@@ -14,5 +20,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 }

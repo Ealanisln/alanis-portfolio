@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@media (prefers-color-scheme: dark) {
+  .twitter-icon {
+    filter: invert(1);
+  }
+}
