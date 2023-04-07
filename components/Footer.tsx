@@ -1,5 +1,4 @@
 import React from "react";
-import twitter from "../public/twitter.svg";
 import Image from "next/image";
 
 const Footer = () => {
@@ -33,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <h4>Copyright © 2023 - All right reserved by Alanis Web Dev</h4>
+        <h4>Copyright © 2023 - All right reserved, made with ❤️ by Emmanuel.</h4>
       </div>
     </footer>
   );

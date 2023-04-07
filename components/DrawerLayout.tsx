@@ -15,9 +15,10 @@ const DrawerLayout = ({ children }: Props) => {
         id="app-drawer"
         type="checkbox"
         className="drawer-toggle"
-        // checked property will now reflect our open state
         checked={open}
+        onChange={(e) => setOpen(e.target.checked)}
       />
+
       <div className="drawer-content flex flex-col">
         <Navbar />
         {children}
