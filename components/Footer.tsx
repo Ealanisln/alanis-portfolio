@@ -22,10 +22,14 @@ const Footer = () => {
             />
           </div>
           <div>
-            {" "}
-            <Image alt="github-icon" src="/github.svg" height={30} width={30} />
+           <Image 
+              alt="github-icon" 
+              src="/github.svg" 
+              height={30} 
+              width={30} />
           </div>
-          <div></div>
+          <div>
+          </div>
         </div>
       </div>
       <div>
