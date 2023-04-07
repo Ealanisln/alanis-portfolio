@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -12,21 +13,21 @@ const Footer = () => {
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">
-          <div>
+          <Link href="https://www.twitter.com/ealanisln">
             <Image
               alt="twitter-icon"
               src="/twitter.svg"
               height={30}
               width={30}
             />
-          </div>
-          <div>
+          </Link>
+          <Link href="https://www.github.com/ealanisln">
            <Image 
               alt="github-icon" 
               src="/github.svg" 
               height={30} 
               width={30} />
-          </div>
+          </Link>
           <div>
           </div>
         </div>

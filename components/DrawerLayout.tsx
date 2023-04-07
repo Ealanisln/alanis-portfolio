@@ -1,14 +1,19 @@
 import React from "react";
 import { useSessionStorage } from "usehooks-ts";
 import Navbar from "./Navbar";
+import Link from "next/link";
 
 type Props = {
   children: React.ReactNode;
 };
 
 const DrawerLayout = ({ children }: Props) => {
-  //initialize state here. we use a key and a default state
   const [open, setOpen] = useSessionStorage("drawer", false);
+
+  const handleCloseDrawer = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="drawer">
       <input
@@ -23,21 +28,19 @@ const DrawerLayout = ({ children }: Props) => {
         <Navbar />
         {children}
       </div>
+
       <div className="drawer-side">
-        <label
-          className="drawer-overlay"
-          // add a onClick handler here to close the drawer
-          onClick={() => setOpen(false)}
-        ></label>
+        <label className="drawer-overlay" onClick={handleCloseDrawer}></label>
+
         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100">
-          <li>
-            <a>Home </a>
+          <li onClick={handleCloseDrawer}>
+            <Link href="/">Home</Link>
           </li>
-          <li>
-            <a>Projects</a>
+          <li onClick={handleCloseDrawer}>
+            <Link href="/projects">Projects</Link>
           </li>
-          <li>
-            <a>Contact</a>
+          <li onClick={handleCloseDrawer}>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>
