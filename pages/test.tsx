@@ -1,18 +1,19 @@
 import type { NextPage } from "next";
-import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
 import { useSessionStorage } from "usehooks-ts";
 
 const Home: NextPage = () => {
   const [, setOpen] = useSessionStorage("drawer", false);
   const toggleDrawer = () => setOpen((prev) => !prev);
-
   return (
-    <>
-      <Hero />
-      <Footer />   
-    </>
+    <div className="container mx-auto">
+      <h1 className="text-2xl">
+        Welcome to <a href="https://nextjs.org">Next.js!</a>
+      </h1>
+      <button className="btn" onClick={toggleDrawer}>
+        Toggle Drawer
+      </button>
+    </div>
   );
-}
+};
 
 export default Home;
