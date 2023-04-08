@@ -5,9 +5,6 @@ import { themeChange } from 'theme-change';
 import { useEffect } from "react";
 
 const Home: NextPage = () => {
-  useEffect(() => {
-    themeChange(false);
-  }, []);
   
   return (
     <>

@@ -16,7 +16,7 @@ export default function SwitchTheme({}) {
       <input
         type="checkbox"
         className="toggle"
-        data-toggle-theme="dark,light"
+        data-toggle-theme="cupcake,dark"
       />
       <Moon />
     </div>
