@@ -48,7 +48,7 @@ const NavBar = () => {
       <div className="navbar-end">
         <button className="btn btn-ghost btn-rectangle">
           <div className="flex">
-            <ThemeSwitcher />
+            {/* <ThemeSwitcher /> */}
           </div>
         </button>
       </div>

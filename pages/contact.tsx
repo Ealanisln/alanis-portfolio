@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const contact = () => {
   return (
     <>
@@ -78,9 +80,9 @@ const contact = () => {
             and how we use data as stated
           </p>
           <div className="flex items-center justify-center w-full">
-            <button className="mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-indigo-700 rounded hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none">
+            <Link href="/submit" className="mt-9 text-base font-semibold leading-none text-white py-4 px-10 btn btn-primary text-center">
               SUBMIT
-            </button>
+            </Link>
           </div>
         </div>
       </div>
