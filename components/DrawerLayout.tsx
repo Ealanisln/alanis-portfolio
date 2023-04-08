@@ -1,7 +1,5 @@
-import React from "react";
 import { useSessionStorage } from "usehooks-ts";
 import Navbar from "./Navbar";
-import SwitchTheme from "./ThemeSwitcher";
 import Link from "next/link";
 
 type Props = {
@@ -42,9 +40,6 @@ const DrawerLayout = ({ children }: Props) => {
           </li>
           <li onClick={handleCloseDrawer}>
             <Link href="/contact">Contact</Link>
-          </li>
-          <li onClick={handleCloseDrawer}>
-            <SwitchTheme />
           </li>
         </ul>
       </div>
