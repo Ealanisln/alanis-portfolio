@@ -1,17 +1,27 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSessionStorage } from "usehooks-ts";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+import { themeChange } from "theme-change";
+
+const themeValues = ["lemonade", "dark","cupcake", "bumblebee", "Aqua"];
 
 const NavBar = () => {
   const [, setOpen] = useSessionStorage("drawer", false);
   const toggleDrawer = () => setOpen((prev) => !prev);
 
+  useEffect(() => {
+    themeChange(false);
+    // 👆 false parameter is required for React projects
+  }, []);
+
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-primary">
       <div className="navbar-start">
         <div className="flex-none lg:hidden">
-          <label className="btn btn-square btn-ghost" onClick={toggleDrawer}>
+          <label
+            className="btn btn-square btn-ghost text-base-100"
+            onClick={toggleDrawer}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -28,27 +38,47 @@ const NavBar = () => {
           </label>
         </div>
         <div className="flex-none hidden lg:block">
-          <ul className="menu menu-horizontal">
+          <ul className="menu menu-horizontal ">
             <li>
-              <Link href="/">Home </Link>
+              <Link className="text-primary-content " href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/projects">Projects</Link>
+              <Link className="text-primary-content" href="/projects">
+                Projects
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link className="text-primary-content" href="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="navbar-center flex items-center">
-        <a className="btn btn-ghost normal-case text-xl">Alanis Web Dev</a>
+        <a className="btn btn-ghost normal-case text-base-100 text-xl">
+          Alanis Web Dev
+        </a>
       </div>
       <div className="navbar-end">
         <button className="btn btn-ghost btn-rectangle">
           <div className="flex">
-            {/* <ThemeSwitcher /> */}
+            {" "}
+            <div className="flex">
+              <select
+                className="text-primary rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
+                data-choose-theme
+              >
+                {themeValues.map((value) => (
+                  <option className="text-primary" key={value.toLowerCase()}>
+                    {value}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </button>
       </div>

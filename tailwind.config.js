@@ -7,9 +7,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: ["class", '[data-theme="dark"]'],
+  darkMode: ["class"],
   daisyui: {
-    themes: ["lemonade", "dark"],
+    themes: ["lemonade", "dark","cupcake", "bumblebee", "Aqua"],
   },
   theme: {
     extend: {

@@ -1,4 +1,4 @@
-import React from "react";
+import Image from 'next/image'
 
 type CardProps = {
   title: string;
@@ -10,24 +10,24 @@ type CardProps = {
 const cards: CardProps[] = [
   {
     title: "Actual portfolio",
-    image: "https://picsum.photos/seed/picsum/200/300",
+    image: "/portfolio.png",
     description: "It was a Blog created using nextjs, daisyUI and TypeScript. Fully responsive, with different dark and light themes.",
     url: "https://github.com/Ealanisln/alanis-portfolio",
   },
   {
     title: "Conducir es fácil",
-    image: "https://picsum.photos/seed/picsum/200/300",
+    image: "/c-e-f.png",
     description:
       "CEF was a project where I rewrote all the code using Next.js. All the comments are stored in a SQL database, and authentication is managed by Supabase, which is connected through a JS client and API. The access rules are defined using a middleware function in Next.js.",
-    url: "https://linktree-alanis.vercel.app/",
+    url: "",
   },
 
   {
-    title: "Rick and Morty app",
-    image: "https://picsum.photos/seed/picsum/200/300",
+    title: "Linktree",
+    image: "/linktree.png",
     description:
       "It was created using NextJS to render data using an external API. Shows an a grid with all the characters, fully responsive.",
-    url: "https://github.com/Ealanisln/rick-morty-app",
+    url: "https://linktree-alanis.vercel.app/",
   },
 ];
 
@@ -43,10 +43,12 @@ const Grid: React.FC = () => {
             key={index}
             className="bg-base-200 rounded-lg overflow-hidden shadow-lg"
           >
-            <img
+            <Image
               className="w-full h-48 object-cover"
               src={card.image}
               alt={card.title}
+              width={192}
+              height={192}
             />
             <div className="p-4">
               <h2 className="text-secondary-content text-lg mb-2">
