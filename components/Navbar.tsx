@@ -1,21 +1,11 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { themeChange } from "theme-change";
 import { useSessionStorage } from "usehooks-ts";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
-
-const themeValues = ["cupcake", "halloween", "bumblebee", "dark"];
 
 const NavBar = () => {
   const [, setOpen] = useSessionStorage("drawer", false);
   const toggleDrawer = () => setOpen((prev) => !prev);
-
-  useEffect(() => {
-    themeChange(false);
-    return () => {
-      themeChange(false);
-    };
-  }, []);
 
   return (
     <div className="navbar bg-base-100">

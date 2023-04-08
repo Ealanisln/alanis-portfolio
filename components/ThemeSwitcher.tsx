@@ -8,7 +8,7 @@ export default function SwitchTheme() {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
       themeChange(true);
-    } else if (theme === "cupcake") {
+    } else if (theme === "lemonade") {
       themeChange(false);
     }
   }, []);
@@ -16,7 +16,7 @@ export default function SwitchTheme() {
   const handleToggle = (event:any) => {
     const isDarkMode = event.target.checked;
     themeChange(isDarkMode);
-    localStorage.setItem("theme", isDarkMode ? "dark" : "cupcake");
+    localStorage.setItem("theme", isDarkMode ? "dark" : "lemonade");
   };
   
   return (
@@ -25,7 +25,7 @@ export default function SwitchTheme() {
       <input
         type="checkbox"
         className="toggle"
-        data-toggle-theme="cupcake,dark"
+        data-toggle-theme="lemonade,dark"
         onChange={handleToggle}
       />
       <Moon />

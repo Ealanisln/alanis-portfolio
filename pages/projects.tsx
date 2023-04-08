@@ -1,9 +1,10 @@
+import CardGrid from "@/components/DrawerCard";
 import Footer from "@/components/Footer";
 
 const projects = () => {
   return (
     <>
-    <div>Projects</div>
+    <CardGrid />
     <Footer/>
     </>
   )
