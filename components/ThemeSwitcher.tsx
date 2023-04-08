@@ -1,4 +1,3 @@
-"use client";
 import { useEffect } from "react";
 import { Moon, Sun } from "react-feather";
 import { themeChange } from "theme-change";
