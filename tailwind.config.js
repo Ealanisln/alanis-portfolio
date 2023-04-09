@@ -9,7 +9,7 @@ module.exports = {
   ],
   darkMode: ["class"],
   daisyui: {
-    themes: ["lemonade", "dark","cupcake", "bumblebee", "Aqua"],
+    themes: ["corporate", "dark","cupcake", "bumblebee", "Aqua"],
   },
   theme: {
     extend: {
