@@ -59,7 +59,7 @@ const NavBar = () => {
       </div>
 
       <div className="navbar-center flex items-center">
-        <a className="btn btn-ghost normal-case text-base-100 text-xl">
+        <a className="btn btn-ghost normal-case text-primary-content text-xl">
           Alanis Web Dev
         </a>
       </div>

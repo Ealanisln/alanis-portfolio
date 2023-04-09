@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 type CardProps = {
   title: string;
@@ -11,7 +11,8 @@ const cards: CardProps[] = [
   {
     title: "Actual portfolio",
     image: "/portfolio.png",
-    description: "It was a Blog created using nextjs, daisyUI and TypeScript. Fully responsive, with different dark and light themes.",
+    description:
+      "It was a Blog created using nextjs, daisyUI and TypeScript. Fully responsive, with different dark and light themes.",
     url: "https://github.com/Ealanisln/alanis-portfolio",
   },
   {
@@ -33,35 +34,42 @@ const cards: CardProps[] = [
 
 const Grid: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-base-100">
-      <h2 className="text-2xl font-bold mb-4 text-left">
-        My projects:
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-8">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className="bg-base-200 rounded-lg overflow-hidden shadow-lg"
-          >
-            <Image
-              className="w-full h-48 object-cover"
-              src={card.image}
-              alt={card.title}
-              width={192}
-              height={192}
-            />
-            <div className="p-4">
-              <h2 className="text-secondary-content text-lg mb-2">
-                {card.title}
-              </h2>
-              <p className="text-secondary-content">{card.description}</p>
-              <br />
-              <div className="py-4">
-                <p className="text-secondary-content">{card.url}</p>
-              </div>
+    <div className="h-32 sm:h-48 md:h-64 lg:h-96 xl:h-128 bg-base-200">
+      <div className="px-4 sm:px-6 lg:px-8 py-8">
+        <div className="mockup-window border bg-base-100">
+          <div className="max-w-7xl mx-auto py-8">
+            <h2 className="text-2xl font-bold mb-4 text-left px-4">
+              My projects:
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-8">
+              {cards.map((card, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg overflow-hidden shadow-lg"
+                >
+                  <Image
+                    className="w-full h-48 object-cover"
+                    src={card.image}
+                    alt={card.title}
+                    width={192}
+                    height={192}
+                  />
+                  <div className="p-4">
+                    <h2 className="text-secondary-content text-lg mb-2">
+                      {card.title}
+                    </h2>
+                    <p className="text-secondary-content">{card.description}</p>
+                    <br />
+                    <div className="py-4">
+                      <p className="text-secondary-content">{card.url}</p>
+                    </div>
+                  </div>
+                  <br/>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
