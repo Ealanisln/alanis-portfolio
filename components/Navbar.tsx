@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useSessionStorage } from "usehooks-ts";
 import { themeChange } from "theme-change";
 
-const themeValues = ["corporate", "dark","cupcake", "bumblebee", "Aqua"];
+const themeValues = ["corporate", "dark", "cupcake", "bumblebee", "autumn"];
 
 const NavBar = () => {
   const [, setOpen] = useSessionStorage("drawer", false);
